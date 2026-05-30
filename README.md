@@ -106,10 +106,10 @@ Grafik incelendiğinde en yüksek seyirci sayısına ulaşan filmin Recep İvedi
 ```text
 sinema-veri-analizi/
 │
-├── data/       # Box Office Türkiye verilerinden oluşturulan veri seti
-├── docs/       # Dokümantasyon ve raporlar
-├── images/     # Analizlerde kullanılan grafikler
-├── notebook/   # Jupyter Notebook ve HTML raporu
+├── data/       
+├── docs/       
+├── images/     
+├── notebook/   
 │   ├── film_analizi.ipynb
 │   └── film_analizi.html
 │
