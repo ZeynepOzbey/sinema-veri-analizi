@@ -94,10 +94,14 @@ Veri setinde yer alan filmler arasında en yüksek seyirci sayısına ulaşan il
 ```text
 sinema-veri-analizi/
 │
-├── data/
-├── images/
-├── notebook/
-├── src/
+├── data/       # Box Office Türkiye verilerinden oluşturulan veri seti
+├── docs/       # Dokümantasyon ve raporlar
+├── images/     # Analizlerde kullanılan grafikler
+├── notebook/   # Jupyter Notebook ve HTML raporu
+│   ├── film_analizi.ipynb
+│   └── film_analizi.html
+│
+├── .gitignore
 └── README.md
 ```
 
