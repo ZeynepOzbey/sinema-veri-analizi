@@ -1,5 +1,11 @@
 # Türk Sinema Filmleri Veri Analizi
 
+## 🌐 Canlı Rapor
+
+https://zeynepozbey.github.io/sinema-veri-analizi/notebook/film_analizi.html
+
+Bu proje, Box Office Türkiye platformundan elde edilen verilerin derlenmesiyle oluşturulan bir veri seti üzerinde gerçekleştirilmiş bir veri analizi çalışmasıdır.
+
 Bu proje, Box Office Türkiye platformundan elde edilen verilerin derlenmesiyle oluşturulan bir veri seti üzerinde gerçekleştirilmiş bir veri analizi çalışmasıdır.
 
 Çalışmada son 10 yılda vizyona giren filmlerin seyirci sayıları, hasılat değerleri, IMDb puanları ve tür bilgileri incelenmiştir. Analizler Python kullanılarak gerçekleştirilmiş ve sonuçlar çeşitli grafiklerle görselleştirilmiştir.
