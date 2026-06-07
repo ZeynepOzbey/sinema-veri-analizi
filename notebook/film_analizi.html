@@ -7834,6 +7834,190 @@ a.anchor-link {
 </div>
 </div>
 </div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=012e6eb0">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="Tan%C4%B1msal-%C4%B0statistikler">Tanımsal İstatistikler<a class="anchor-link" href="#Tan%C4%B1msal-%C4%B0statistikler">¶</a></h2><p>Bu bölümde veri setinde yer alan değişkenlerin temel istatistiksel özellikleri incelenmiştir. Ortalama değerler, frekans dağılımları ve grup bazlı özet istatistikler kullanılarak veri setinin genel yapısı değerlendirilmiştir.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=3bf17996">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [19]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+
+<span class="n">pd</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">float_format</span> <span class="o">=</span> <span class="s1">'</span><span class="si">{:,.2f}</span><span class="s1">'</span><span class="o">.</span><span class="n">format</span>
+
+<span class="n">df</span><span class="p">[[</span><span class="s2">"imdb_puani"</span><span class="p">,</span> <span class="s2">"toplam_seyirci"</span><span class="p">,</span> <span class="s2">"toplam_hasilat"</span><span class="p">]]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[19]:</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>imdb_puani</th>
+<th>toplam_seyirci</th>
+<th>toplam_hasilat</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>count</th>
+<td>100.00</td>
+<td>100.00</td>
+<td>100.00</td>
+</tr>
+<tr>
+<th>mean</th>
+<td>6.12</td>
+<td>1,824,351.30</td>
+<td>84,281,416.94</td>
+</tr>
+<tr>
+<th>std</th>
+<td>1.47</td>
+<td>1,403,136.94</td>
+<td>106,680,572.55</td>
+</tr>
+<tr>
+<th>min</th>
+<td>2.00</td>
+<td>314,198.00</td>
+<td>5,556,318.00</td>
+</tr>
+<tr>
+<th>25%</th>
+<td>5.50</td>
+<td>871,006.50</td>
+<td>20,295,238.75</td>
+</tr>
+<tr>
+<th>50%</th>
+<td>6.20</td>
+<td>1,446,716.50</td>
+<td>42,630,581.50</td>
+</tr>
+<tr>
+<th>75%</th>
+<td>7.30</td>
+<td>2,119,006.75</td>
+<td>111,394,175.00</td>
+</tr>
+<tr>
+<th>max</th>
+<td>8.80</td>
+<td>7,437,050.00</td>
+<td>690,941,771.00</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=1efb5969">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [17]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"Ortalama IMDb:"</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">"imdb_puani"</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span><span class="mi">2</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Medyan IMDb:"</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">"imdb_puani"</span><span class="p">]</span><span class="o">.</span><span class="n">median</span><span class="p">(),</span><span class="mi">2</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Standart Sapma:"</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">"imdb_puani"</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">(),</span><span class="mi">2</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Ortalama IMDb: 6.12
+Medyan IMDb: 6.2
+Standart Sapma: 1.47
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=2a3f5efd">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [22]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">"ana_tur"</span><span class="p">)[</span><span class="s2">"imdb_puani"</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[22]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>ana_tur
+Gerilim     7.95
+Dram        7.16
+Macera      6.64
+Aksiyon     6.60
+Fantastik   6.40
+Suç         6.10
+Animasyon   6.06
+Komedi      5.33
+Korku       4.00
+Aile        3.75
+Tarihi      3.50
+Name: imdb_puani, dtype: float64</pre>
+</div>
+</div>
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=2ece771a">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
